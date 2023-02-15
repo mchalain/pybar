@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<data pyBar="http://pybar.fr/index.php?page=logiciel-pybar" version="3.4">
+  <elem id="node">
+    <node id="N1" d="0,0" liaison="1" />
+    <node id="N2" d="10,0" liaison="2" />
+    <node id="N3" d="22,0" liaison="2" />
+    <node id="N4" d="30,0" liaison="2" />
+  </elem>
+  <elem id="barre">
+    <barre id="B1" start="N1" end="N2" r0="0" r1="0" />
+    <barre id="B2" start="N2" end="N3" r0="0" r1="0" />
+    <barre id="B3" start="N3" end="N4" r0="0" r1="0" />
+  </elem>
+  <elem id="geo">
+    <barre id="*" profil="UPN 160" s="0.0024" igz="9.25e-06" h="0.16" v="0.08" />
+  </elem>
+  <elem id="material">
+    <barre id="B2,B3" young="200000000000" mv="3000" />
+    <barre id="B1" young="210000000000" mv="6000" />
+  </elem>
+  <elem id="char">
+    <case id="CP">
+      <pp d="true" />
+    </case>
+    <case id="Q1">
+      <barre id="B1" qu="0,,0.0,-10.0" />
+    </case>
+    <case id="Q2">
+      <barre id="B2" qu="0,,0.0,-10.0" />
+    </case>
+    <case id="Q3">
+      <barre id="B3" qu="0,,0.0,-10.0" />
+    </case>
+  </elem>
+  <elem id="combinaison">
+    <combinaison id="1,35G+1,5Q1" d="1.35,1.5,0.0,0.0" />
+    <combinaison id="1,35G+1,5Q1+1,5Q2+1,5Q3" d="1.35,1.5,1.5,1.5" />
+    <combinaison id="1,35G+1,5Q1+1,5Q3" d="1.35,1.5,0.0,1.5" />
+    <combinaison id="1,35G+1,5Q2" d="1.35,0.0,1.5,0.0" />
+    <combinaison id="1,35G+1,5Q3" d="1.35,0.0,0.0,1.5" />
+    <combinaison id="G+Q1+Q2+Q3" d="1.0,1.0,1.0,1.0" />
+  </elem>
+  <elem id="prefs">
+    <unit id="C" d="1000000.0" />
+    <unit id="E" d="1.0" />
+    <unit id="F" d="1000.0" />
+    <unit id="I" d="1.0" />
+    <unit id="M" d="1.0" />
+    <unit id="L" d="1.0" />
+    <unit id="S" d="1.0" />
+    <const name="g" value="9.81" />
+    <const name="conv" value="1" />
+  </elem>
+  <draw id="prefs">
+    <drawing x0="100.0" y0="150.0" scale="23.533333333333335" status="6,0,7,9" bar_name="true" node_name="true" axis="false" show_title="true" title="150.0,110.0,118,25,poutre4appuis" scale_pos="56.0,85.0,70,25" />
+    <drawing x0="122.0" y0="453.0" scale="23.533333333333335" status="7,0,7,9" bar_name="true" node_name="true" axis="false" show_title="true" title="171.0,396.0,166,25,poutre4appuis" scale_pos="78.0,388.0,67,25" />
+  </draw>
+</data>
